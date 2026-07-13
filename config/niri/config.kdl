@@ -37,7 +37,6 @@ input {
 	repeat-delay 250
 	repeat-rate 40
         xkb 
-
         numlock
     }
     mouse {
@@ -47,6 +46,11 @@ input {
            accel-profile "flat"
         // scroll-method "no-scroll"
     }
+}
+
+cursor {
+    xcursor-theme "Adwaita"
+    xcursor-size 25
 }
 
 layout {
@@ -166,7 +170,7 @@ window-rule {
     clip-to-geometry true
     tiled-state true
 
-    opacity 1.0
+    opacity 0.85
 
     background-effect {
 	blur true
@@ -233,13 +237,4 @@ recent-windows {
 }
 
 include "binds.kdl"
-
-// NOTE: DMS used to auto-regenerate a cursor theme/size setting here
-// (Adwaita, size 25) via dms/cursor.kdl. There's no top-level `cursor {}`
-// node elsewhere in this file, so if you want that back, add:
-//   cursor {
-//       xcursor-theme "Adwaita"
-//       xcursor-size 25
-//   }
-
 include "noctalia.kdl"
