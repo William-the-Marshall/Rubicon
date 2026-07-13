@@ -1,0 +1,70 @@
+config_version = 1
+
+[bar.default]
+background_opacity = 0.45
+center = [ "media", "clock" ]
+end = [ "tray", "clipboard", "volume", "control-center", "session" ]
+font_family = "JetBrainsMono NF"
+start = [ "launcher", "workspaces" ]
+
+[desktop_widgets]
+enabled = false
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@DP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 961.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        input_opacity = 1.0
+        input_radius = 6.0
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_password_hint = true
+
+[shell]
+font_family = "JetBrainsMono NF"
+niri_overview_type_to_launch_enabled = true
+
+    [shell.panel]
+    transparency_mode = "soft"
+
+[theme]
+builtin = "Tokyo-Night"
+community_palette = "Tokyo Night Moon"
+mode = "dark"
+source = "community"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "kitty", "niri" ]
+    community_ids = [ "papirus-icons" ]
+
+[wallpaper.default]
+path = "/home/jonf/Pictures/Wallpapers/nightmountain.jpg"
+
+[wallpaper.last]
+path = "/home/jonf/Pictures/Wallpapers/nightmountain.jpg"
+
+[wallpaper.monitors.DP-1]
+path = "/home/jonf/Pictures/Wallpapers/nightmountain.jpg"
+
+[widget.media]
+hide_when_no_media = true

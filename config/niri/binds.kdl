@@ -22,7 +22,7 @@ binds {
     // Mod+Alt+L  -> was: lock screen
 
     // === Custom Binds === // 
-    Mod+B hotkey-overlay-title="Web Browser" { spawn "waterfox"; }
+    Mod+B hotkey-overlay-title="Web Browser" { spawn "firefox"; }
  
     Mod+T hotkey-overlay-title="Tauon Music Box" { spawn "tauon"; }
     Mod+E hotkey-overlay-title="File Mangaer" { spawn "nautilus"; }

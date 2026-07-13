@@ -2,7 +2,7 @@
 
     # Home Rubicon - Jonf
     let
-      dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
+      dotfiles = "${config.home.homeDirectory}/nixos/config";
       create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
 
         configs = {
@@ -24,28 +24,19 @@
     
     programs.git = {
       enable = true;
-      userName = "Jonathon Frye";
-      userEmail = "jdfrye96@gmail.com";
+        settings = {
+          user = {
+            name = "Jonathon Frye";
+            email = "jdfrye96@gmail.com";
+          };
+        };
     };
     
     programs.noctalia = {
       enable = true;
-
-      systemd = {
-        enable = true;
-      };
-
+      
       settings = {
-        theme = {
-          mode = "dark";
-          source = "builtin";
-          builtin = "Catppuccin";
-        };
-
-         # wallpaper = {
-         # enabled = true;
-         # default.path = "~/Downloads/";
-        #};
+      	source = "~/.config/noctalia/";
       };
     };
       
