@@ -9,6 +9,7 @@
           nvim = "nvim";
           niri = "niri";
           kitty = "kitty";
+          noctalia = "noctalia";
         };
 
     in
@@ -28,7 +29,7 @@
           user = {
             name = "Jonathon Frye";
             email = "jdfrye96@gmail.com";
-          };
+            };
         };
     };
     
@@ -36,7 +37,7 @@
       enable = true;
       
       settings = {
-      	source = "~/.config/noctalia/";
+      	lib.importTOML = "./config/noctalia/config.toml";
       };
     };
       
